@@ -38,12 +38,12 @@ public void testMultiplication() {
 // Equal null
 // Equal object
 // 5 CHF * 2 = 10 CHF -> DONE
-// Dollar/Franc Duplication
+// Dollar/Franc Duplication -> DONE
 // Common equals -> DONE
 // Common times -> DONE
 // Compare Francs to Dollars -> DONE
 // Currency? -> DONE
-// Delete testFrancMultiplication?
+// Delete testFrancMultiplication? -> DONE
 ~~~
 - The smallest change I can make to make this test pass, is to make amount = 10, so we start there
 - However, our goal is to be able to write a test that makes sense to us, without having to change the code (otherwise, the test and code are dependent on each other)
