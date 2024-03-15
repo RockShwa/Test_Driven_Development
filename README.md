@@ -29,6 +29,13 @@ public void testMultiplication() {
 }
 // TO-DO List:
 // $5 + 10 CHF = $10 of rate is 2:1
+// $5 + $5 = $10 -> DONE
+// Return Money from $5 + $5
+// Bank.reduce(Money) -> DONE
+// Reduce Money with conversion -> DONE
+// Reduce (Bank, String) -> DONE
+// Sum.plus -> DONE
+// Expression.times -> DONE
 // $5 * 2 = $10 -> DONE
 // Make amount private -> DONE
 // Dollar side-effects? -> DONE
@@ -64,6 +71,10 @@ public void testMultiplication() {
     - One implication of Value Objects is that all operations must return a new object, and another is that Value Objects should implement equals(), because one $5 is pretty much good as another (also means you have to implment hashCode())
 - Triangulation: When we triagulate, we only generalize code when we have two examples or more; we briefly ignore the duplication between test and model code. When the second example demands a general solution, then and only then do we generalize
     - Author uses it as a last resort, when he's totally unsure of what to refactor
+
+### Chapter 12 - Addition, Finally
+- When the object we have does not behave in the way we want it to, we make another object with the same external protocol (an imposter) but a different implementation
+- The Expressions seem to be the heart of the goal here (adding diff currencies). I try to keep objects at the heart as ignorant of the rest of the world as possible, so they stay flexible
 
 
 

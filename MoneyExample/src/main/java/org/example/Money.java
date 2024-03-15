@@ -1,6 +1,6 @@
 package org.example;
 
-public class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -35,7 +35,19 @@ public class Money {
         return amount + " " + currency;
     }
 
-    public Money times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
+
+    public Expression plus(Expression addend) {
+        return new Sum(this, addend);
+    }
+
+    // Sum -> (fiveBucks, tenFrancs), fiveBucks
+    // Sum -> (5, 5)
+    public Money reduce(Bank bank, String to) {
+        int rate = bank.rate(currency, to);
+        return new Money(amount / rate, to);
+    }
 }
+
