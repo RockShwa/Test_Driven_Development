@@ -76,6 +76,35 @@ public void testMultiplication() {
 - When the object we have does not behave in the way we want it to, we make another object with the same external protocol (an imposter) but a different implementation
 - The Expressions seem to be the heart of the goal here (adding diff currencies). I try to keep objects at the heart as ignorant of the rest of the world as possible, so they stay flexible
 
+## PART 2 - The xUnit Example
+- This is about testing our testing framework :D
+
+### Chapter 18 - First Steps to xUnit
+- In this part, we're develping our own testing framework with xUnit principles
+- To-Do List for a Testing Framework:
+1) Invoke test method -> DONE
+2) Invoke setUp first -> DONE
+3) Invoke tearDown afterward -> DONE
+4) Invoke tearDown even if the test method fails -> DONE
+5) Run multiple tests -> DONE
+6) Report collected results -> DONE
+7) Log string in WasRun -> DONE
+8) Report failed tests -> DONE
+- General patterns of refactoring:
+    - Seperate two parts so you can work on them seperately; if they go back together, fine. If not, you can leave them seperate
+    - Take code that works in one instance and generalize it to work in many by replacing constants with variables
+
+### Chapter 19 - Set the Table
+- When you write tests, here is a common pattern:
+1) Arrange - create some objects (often the same from test to test)
+2) Act - simulate them (unique to a test)
+3) Assert - check the results (unique to a test)
+- How to create the objects to test? Two concerns:
+1) Performance - we want our tests to run as quickly as possible; if we use similar objectss in several tests, we would like to create them once for all tests
+2) Isolation - we want the success or failure of one test to be irrelevant to other tests; if tests share objects and one test changes the objects, following tests are likely to change their results
+    - **DO NOT Couple Tests**
+
+
 
 
 
