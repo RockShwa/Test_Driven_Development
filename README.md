@@ -1,6 +1,8 @@
 # Test Driven Development
 
-- The mantra of TDD:
+This project stores all the notes and exercises I created when I read through the book Test Driven Development by Kent Beck. 
+
+The mantra of TDD:
 1) Red: Write a test that dosen't work, and perhaps dosen't even compile at first
 2) Green: Make the test work quickly, commiting whatever (coding) sins necessary in the process 
 3) Refactor: Eliminate all of the duplication created in merely getting the test to work
